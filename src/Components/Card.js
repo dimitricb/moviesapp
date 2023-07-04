@@ -17,7 +17,7 @@ const Card = (movie) => {
           </div>
           <div className="overview">
             <h1>Overview</h1>
-            {/* Neki tekst od nekoliko reci umesto lorem ipsum. */}
+            {/* Lorem ipsum. */}
             {movie.info.overview}
           </div>
         </div>
