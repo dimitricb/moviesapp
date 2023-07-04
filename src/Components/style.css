@@ -175,3 +175,11 @@ nav ul li a:focus::before {
   font-size: 40px;
   font-weight: bold;
 }
+
+.btn {
+  background-color: #f0e6e6;
+  color: #dd6075;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 20%;
+}

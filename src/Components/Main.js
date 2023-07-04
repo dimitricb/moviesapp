@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Form from "./Form";
 
 import Card from "./Card";
 
@@ -26,31 +28,31 @@ const Main = () => {
   }, [url_set]);
 
   const getData = (movieType) => {
-    if (movieType == "Popular") {
+    if (movieType === "Popular") {
       url =
         base_url +
         "/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&primary_release_year=2023&sort_by=popularity.desc" +
         API_key;
     }
-    if (movieType == "Now in Theaters") {
+    if (movieType === "Now in Theaters") {
       url =
         base_url +
         "/discover/movie?primary_release_date.gte=2017-09-15&primary_release_date.lte=2023-01-22" +
         API_key;
     }
-    if (movieType == "Kids & Family") {
+    if (movieType === "Kids & Family") {
       url =
         base_url +
         "/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc" +
         API_key;
     }
-    if (movieType == "Drama") {
+    if (movieType === "Drama") {
       url =
         base_url +
         "/discover/movie?with_genres=18&primary_release_year=2014" +
         API_key;
     }
-    if (movieType == "Comedy") {
+    if (movieType === "Comedy") {
       url =
         base_url +
         "/discover/movie?with_genres=35&with_cast=23659&sort_by=popularity.desc" +
@@ -60,7 +62,7 @@ const Main = () => {
   };
 
   const searchMovie = (evt) => {
-    if (evt.key == "Enter") {
+    if (evt.key === "Enter") {
       url =
         base_url +
         "/search/movie?api_key=997439096313737218d40f2ef3fac9b1&query=" +
@@ -109,6 +111,10 @@ const Main = () => {
             </li> */}
           </ul>
         </nav>
+        <Link to="/form">
+          <button className="btn">Sign In</button>
+        </Link>
+
         <form>
           <div className="search-btn">
             <input
@@ -135,7 +141,7 @@ const Main = () => {
         <Card />
         <Card /> */}
 
-        {movieData.length == 0 ? (
+        {movieData.length === 0 ? (
           <p className="notfound">Not Found</p>
         ) : (
           movieData.map((res, pos) => {
