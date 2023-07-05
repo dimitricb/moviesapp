@@ -2,6 +2,8 @@ import React from "react";
 import "../App.css";
 import signInPic from "../assets/cinema-realistic-poster-with-illuminated-bucket-popcorn-drink-3d-glasses-reel-tickets-blue-background-with-tapes-vector-illustration_1284-77070.avif";
 import { useForm } from "react-hook-form";
+import Logo from "./Logo";
+import Footer from "./Footer";
 
 const Form = () => {
   //const {register,handleSubmit,watch,formState:{errors}}=useForm();
@@ -20,7 +22,9 @@ const Form = () => {
       <section className="section-form">
         <div className="register">
           <div className="col-1">
+            <Logo />
             <h2>Sign In</h2>
+
             <span>Register and enjoy!</span>
 
             <form
@@ -60,6 +64,7 @@ const Form = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

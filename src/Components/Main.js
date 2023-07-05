@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Form from "./Form";
+import Logo from "./Logo";
+import Footer from "./Footer";
 
 import Card from "./Card";
 
@@ -77,6 +79,7 @@ const Main = () => {
       <div className="header">
         <nav>
           <ul>
+            <Logo />
             {arr.map((value, pos) => {
               return (
                 <li>
@@ -149,6 +152,7 @@ const Main = () => {
           })
         )}
       </div>
+      <Footer />
     </>
   );
 };

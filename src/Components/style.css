@@ -183,3 +183,10 @@ nav ul li a:focus::before {
   cursor: pointer;
   border-radius: 20%;
 }
+
+.logo-image {
+  width: 110px;
+  margin-right: 120px;
+  margin-top: -25px;
+  border-radius: 70%;
+}
