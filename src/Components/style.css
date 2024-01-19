@@ -5,8 +5,8 @@
   font-family: "Poppins", sans-serif;
 }
 :root {
-  --primary-color: #ede2e1;
-  --secondary-color: #e9cece;
+  --primary-color: #f2c1bd;
+  --secondary-color: #f2a7a7;
 }
 body {
   background-color: var(--primary-color);
