@@ -38,17 +38,17 @@ const Form = () => {
                 placeholder="username"
               ></input>
               <input
-                type="text"
+                type="password"
                 {...register("password")}
                 placeholder="password"
               ></input>
               <input
-                type="text"
+                type="password"
                 {...register("confirm password")}
                 placeholder="confirm password"
               ></input>
               <input
-                type="text"
+                type="tel"
                 //validacija
                 {...register("mobile", { required: true, maxLength: 10 })}
                 placeholder="mobile number"
